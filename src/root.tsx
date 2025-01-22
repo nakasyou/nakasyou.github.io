@@ -29,6 +29,12 @@ export default component$(() => {
           />
         )}
         <RouterHead />
+        {
+          isDev && <>
+            <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+            <script dangerouslySetInnerHTML='eruda.init()' />
+          </>
+        }
       </head>
       <body lang="en">
         <RouterOutlet />
