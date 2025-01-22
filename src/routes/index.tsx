@@ -6,6 +6,8 @@ import { Articles } from './Articles'
 import { getArticles } from '~/lib/articles'
 import { MutualLinks } from './MutualLinks'
 import { Works } from './Works'
+import { Bio } from './Bio'
+import { Contact } from './Contact'
 
 export const useArticles = routeLoader$(() => {
   return getArticles()
@@ -38,8 +40,10 @@ export default component$(() => {
           </div>
           <div class='w-1/2 flex flex-col gap-5'>
             <Articles posts={articles.value} />
+            <Bio />
           </div>
         </div>
+        <Contact />
       </div>
     </>
   )

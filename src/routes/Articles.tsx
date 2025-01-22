@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import {  } from '@builder.io/qwik-city'
 import type { Post } from "~/lib/articles";
 
-const Post = component$<{
+const OnePost = component$<{
   post: Post
 }>((props) => {
   return <a href={props.post.url} target="_blank" rel="noreferrer"><div>
@@ -24,7 +24,7 @@ export const Articles = component$<{
     <div class="text-3xl font-bold mb-2">Articles</div>
     <div class="flex flex-col gap-2">
       {
-        props.posts.map(props => <Post post={props} />)
+        props.posts.map((props, i) => <OnePost post={props} key={props.url} />)
       }
     </div>
   </div>

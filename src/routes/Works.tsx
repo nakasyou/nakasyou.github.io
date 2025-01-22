@@ -3,6 +3,11 @@ import { $, component$, inlinedQrl, Slot } from "@builder.io/qwik";
 import NanohaImage from '../assets/nanoha.jpeg?jsx'
 import HonoWS from '../assets/hono-ws.png?jsx'
 import JSROGP from '../assets/jsr-ogp.png?jsx'
+import BadappleHono from '../assets/badapple-hono.png?jsx'
+import Ha from '../assets/ha.png?jsx'
+import MaterialColorUNO from '../assets/material-color-uno.png?jsx'
+import AblazeI18n from '../assets/ablaze-l18n.png?jsx'
+import SpaceUnicorn from '../assets/spaceunicorn.png?jsx'
 
 export const Work = component$((props: {
   title: string
@@ -29,6 +34,21 @@ export const Works = component$(() => {
       </Work>
       <Work link="https://github.com/jsr-io/jsr/pull/417" title="OGP in jsr.io" desc="jsr.io にパッケージの OGP サポートを追加。">
         <JSROGP q:slot='image' class="w-full h-full object-cover" />
+      </Work>
+      <Work link="https://github.com/nakasyou/badapple-hono" title="Bad Apple with Hono" desc="Bad Apple!! feat. nomico を hono/streaming を用いて再生。">
+        <BadappleHono q:slot='image' class="w-full h-full object-cover" />
+      </Work>
+      <Work link="https://github.com/nakasyou/ha" title="@ns/ha" desc="Web 上でシンプルかつインタラクティブな波を表現するライブラリ。">
+        <Ha q:slot='image' class="w-full h-full object-cover" />
+      </Work>
+      <Work link="https://github.com/XelyNetwork/material-color-uno" title="material-color-uno" desc="Material Design 3 のカラーシステムを UnoCSS のプリセットとして提供するライブラリ。">
+        <MaterialColorUNO q:slot='image' class="w-full h-full object-cover" />
+      </Work>
+      <Work link="https://ablaze.one" title="i18n in ablaze.one" desc="Astro を用いて i18n を独自実装。">
+        <AblazeI18n q:slot='image' class="w-full h-full object-cover" />
+      </Work>
+      <Work link="https://github.com/XelyNetwork/spaceunocorn" title="SpaceUnicorn" desc="Hono の上に構築された WebSocket なしの環境でも双方向 Web 通信を可能にするライブラリ。">
+        <SpaceUnicorn q:slot='image' class="w-full h-full object-cover" />
       </Work>
     </div>
   </div>
