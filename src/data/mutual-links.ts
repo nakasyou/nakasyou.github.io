@@ -54,4 +54,10 @@ export const mutualLinks = [
     addedAt: '2024-09-18',
     url: 'https://nishi.boats',
   },
+  {
+    name: "Yunai's website",
+    author: 'ynai20さん',
+    addedAt: '2025-06-22',
+    url: 'https://ynai20.vercel.app',
+  },
 ]
