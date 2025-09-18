@@ -27,19 +27,19 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",
-    "@builder.io/qwik": "^1.12.0",
-    "@builder.io/qwik-city": "^1.12.0",
+    "@builder.io/qwik": "^1.16.0",
+    "@builder.io/qwik-city": "^1.16.0",
     "@qwik-ui/headless": "^0.6.4",
     "@types/node": "20.14.11",
     "@unocss/core": "^65.4.2",
     "@unocss/preset-icons": "^65.4.2",
     "@unocss/preset-uno": "^65.4.2",
     "@unocss/reset": "^65.4.2",
-    "@unocss/vite": "^65.4.2",
+    "@unocss/vite": "^66.5.1",
     "ignore": "^7.0.3",
     "typescript": "5.4.5",
     "undici": "*",
-    "vite": "5.3.5",
+    "vite": "npm:rolldown-vite",
     "vite-tsconfig-paths": "^4.2.1"
   },
   "dependencies": {
