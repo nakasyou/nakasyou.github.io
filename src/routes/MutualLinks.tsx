@@ -30,7 +30,7 @@ export const MutualLinks = component$(() => {
               >
                 {name}
               </a>
-              <div class="text-gray-500">&nbsp;by {author}</div>
+              <div class="text-gray-500 text-right">&nbsp;{author}</div>
             </div>
           ))}
         </ul>
