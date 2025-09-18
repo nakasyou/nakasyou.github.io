@@ -25,26 +25,21 @@ export default component$(() => {
     })
   })
   return (
-    <div class="p-4">
+    <div class="max-w-4xl mx-auto px-10 py-20">
       <div class="">
         <Hero />
       </div>
       <hr class="my-5" />
-      <div class="md:flex gap-0 md:gap-10">
-        <div class="w-full flex flex-col gap-5 md:w-1/2">
+      <div class="md:flex gap-20 my-10">
+        <div class="w-full flex flex-col gap-10 md:w-1/2">
           <About />
           <div class="block md:hidden">
             <Articles posts={articles.value} />
           </div>
           <MutualLinks />
-          <div class="block md:hidden">
-            <Bio />
-          </div>
-          <Works />
         </div>
-        <div class="hidden md:flex flex-col gap-5 w-1/2">
+        <div class="hidden md:flex flex-col gap-10 w-1/2">
           <Articles posts={articles.value} />
-          <Bio />
         </div>
       </div>
       <Contact />

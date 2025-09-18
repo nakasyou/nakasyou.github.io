@@ -17,11 +17,11 @@ const ContactLink = component$<
   )
 >((props) => {
   return (
-    <>
-      <div class="flex items-center gap-2 items-center">
+    <div class="flex gap-2 items-center justify-between">
+      <div class="flex items-center gap-2 items-center w-40">
         <div class={`w-6 h-6 ${props.icon}`} />
-        <div>{props.name}</div>
-        <div class={'text-sm'}>
+        <div class="w-20">{props.name}</div>
+        <div class="text-sm">
           (
           {
             {
@@ -56,21 +56,21 @@ const ContactLink = component$<
           </button>
         )}
       </div>
-    </>
+    </div>
   )
 })
 export const Contact = component$(() => {
   return (
-    <div>
-      <div class="text-3xl font-bold mb-2 text-center">Contact</div>
-      <div class="grid place-items-center">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center max-w-100">
+    <div class="w-full grid place-items-center my-10">
+      <div class="grid">
+        <div class="text-3xl font-bold mb-4">Contact</div>
+        <div class="grid grid-cols-1 gap-2 w-full md:max-w-100">
           <ContactLink
-            icon="i-simple-icons:instagram"
+            icon="i-simple-icons:signal"
             speed="ultrafast"
-            name="Instagram"
-            url="https://instagram.com/nakasyou_opened"
-            id="@nakasyou_opened"
+            name="Signal"
+            url="https://signal.me/#eu/cMPsaRyUlW-gh1gM1DA5IaFykoDujy5e53hPMxsoU1bKGoi9uLZIqYl3torySBb4"
+            id="nakasyou.63"
           />
           <ContactLink
             icon="i-simple-icons:x"
@@ -91,7 +91,7 @@ export const Contact = component$(() => {
             speed="ultraslow"
             name="e-mail"
             url="mailto:nakasyou1103@gmail.com"
-            id="nakasyou1103@gmail.com"
+            id="Gmail"
           />
         </div>
       </div>

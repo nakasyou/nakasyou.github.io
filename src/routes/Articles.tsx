@@ -30,8 +30,11 @@ export const Articles = component$<{
     <div>
       <div class="text-3xl font-bold mb-2">Articles</div>
       <div class="flex flex-col gap-2">
-        {props.posts.map((props, _i) => (
-          <OnePost post={props} key={props.url} />
+        {props.posts.map((post, i) => (
+          <>
+          <OnePost post={post} key={post.url} />
+          {i !== props.posts.length - 1 && <div class="h-px w-full bg-gray-100" />}
+          </>
         ))}
       </div>
     </div>
