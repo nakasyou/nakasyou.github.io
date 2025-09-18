@@ -3,11 +3,9 @@ import { type DocumentHead, routeLoader$ } from '@builder.io/qwik-city'
 import { getArticles } from '~/lib/articles'
 import { About } from './About'
 import { Articles } from './Articles'
-import { Bio } from './Bio'
 import { Contact } from './Contact'
 import { Hero } from './Hero'
 import { MutualLinks } from './MutualLinks'
-import { Works } from './Works'
 
 export const useArticles = routeLoader$(() => {
   return getArticles()

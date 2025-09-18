@@ -39,28 +39,40 @@ export const Works = component$(() => {
           title="Nanoha"
           desc="AI 搭載「暗記」用デジタルノートブック。東京都モバイルアプリコンテスト2024受賞。"
         >
-          <NanohaImage q:slot="image" class="w-full h-full object-cover rounded-lg" />
+          <NanohaImage
+            q:slot="image"
+            class="w-full h-full object-cover rounded-lg"
+          />
         </Work>
         <Work
           link="https://github.com/honojs/hono/pull/2265"
           title="hono/ws"
           desc="Hono の WebSocket サポート。マルチランタイムをサポート。"
         >
-          <HonoWS q:slot="image" class="w-full h-full object-cover rounded-lg" />
+          <HonoWS
+            q:slot="image"
+            class="w-full h-full object-cover rounded-lg"
+          />
         </Work>
         <Work
           link="https://github.com/jsr-io/jsr/pull/417"
           title="OGP in jsr.io"
           desc="jsr.io にパッケージの OGP サポートを追加。"
         >
-          <JSROGP q:slot="image" class="w-full h-full object-cover rounded-lg" />
+          <JSROGP
+            q:slot="image"
+            class="w-full h-full object-cover rounded-lg"
+          />
         </Work>
         <Work
           link="https://github.com/nakasyou/badapple-hono"
           title="Bad Apple with Hono"
           desc="Bad Apple!! feat. nomico を hono/streaming を用いて再生。"
         >
-          <BadappleHono q:slot="image" class="w-full h-full object-cover rounded-lg" />
+          <BadappleHono
+            q:slot="image"
+            class="w-full h-full object-cover rounded-lg"
+          />
         </Work>
         <Work
           link="https://github.com/nakasyou/ha"
@@ -74,21 +86,30 @@ export const Works = component$(() => {
           title="material-color-uno"
           desc="Material Design 3 のカラーシステムを UnoCSS のプリセットとして提供するライブラリ。"
         >
-          <MaterialColorUNO q:slot="image" class="w-full h-full object-cover rounded-lg" />
+          <MaterialColorUNO
+            q:slot="image"
+            class="w-full h-full object-cover rounded-lg"
+          />
         </Work>
         <Work
           link="https://ablaze.one"
           title="i18n in ablaze.one"
           desc="Astro を用いて i18n を独自実装。"
         >
-          <AblazeI18n q:slot="image" class="w-full h-full object-cover rounded-lg" />
+          <AblazeI18n
+            q:slot="image"
+            class="w-full h-full object-cover rounded-lg"
+          />
         </Work>
         <Work
           link="https://github.com/XelyNetwork/spaceunocorn"
           title="SpaceUnicorn"
           desc="Hono の上に構築された WebSocket なしの環境でも双方向 Web 通信を可能にするライブラリ。"
         >
-          <SpaceUnicorn q:slot="image" class="w-full h-full object-cover rounded-lg" />
+          <SpaceUnicorn
+            q:slot="image"
+            class="w-full h-full object-cover rounded-lg"
+          />
         </Work>
       </div>
     </div>
