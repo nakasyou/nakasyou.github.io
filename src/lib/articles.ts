@@ -23,14 +23,14 @@ const setCache = (data: Post[]) => {
   if (import.meta.env.PROD) {
     return
   }
-  // @ts-ignore for cache
+  // @ts-expect-error for cache
   globalThis._posts = data
 }
 const getCache = (): Post[] | null => {
   if (import.meta.env.PROD) {
     return null
   }
-  // @ts-ignore for cache
+  // @ts-expect-error for cache
   return globalThis._posts ?? null
 }
 

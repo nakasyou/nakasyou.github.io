@@ -21,7 +21,7 @@ const ContactLink = component$<
       <div class="flex items-center gap-2 items-center">
         <div class={`w-6 h-6 ${props.icon}`} />
         <div>{props.name}</div>
-        <div class={`text-sm`}>
+        <div class={'text-sm'}>
           (
           {
             {

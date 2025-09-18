@@ -6,7 +6,9 @@
   },
   "engines-annotation": "Mostly required by sharp which needs a Node-API v9 compatible runtime",
   "private": true,
-  "trustedDependencies": ["sharp"],
+  "trustedDependencies": [
+    "sharp"
+  ],
   "trustedDependencies-annotation": "Needed for bun to allow running install scripts",
   "type": "module",
   "scripts": {
@@ -18,13 +20,13 @@
     "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
-    "fmt": "biome format --write",
+    "fmt": "biome check --write",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.2.4",
     "@builder.io/qwik": "^1.12.0",
     "@builder.io/qwik-city": "^1.12.0",
     "@qwik-ui/headless": "^0.6.4",

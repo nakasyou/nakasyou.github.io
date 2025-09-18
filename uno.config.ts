@@ -1,6 +1,6 @@
 import type { UserConfig } from '@unocss/core'
-import { presetUno } from '@unocss/preset-uno'
 import { presetIcons } from '@unocss/preset-icons'
+import { presetUno } from '@unocss/preset-uno'
 
 export default {
   presets: [

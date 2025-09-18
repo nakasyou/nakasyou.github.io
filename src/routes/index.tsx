@@ -1,13 +1,13 @@
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik'
-import { routeLoader$, type DocumentHead } from '@builder.io/qwik-city'
-import { Hero } from './Hero'
+import { type DocumentHead, routeLoader$ } from '@builder.io/qwik-city'
+import { getArticles } from '~/lib/articles'
 import { About } from './About'
 import { Articles } from './Articles'
-import { getArticles } from '~/lib/articles'
-import { MutualLinks } from './MutualLinks'
-import { Works } from './Works'
 import { Bio } from './Bio'
 import { Contact } from './Contact'
+import { Hero } from './Hero'
+import { MutualLinks } from './MutualLinks'
+import { Works } from './Works'
 
 export const useArticles = routeLoader$(() => {
   return getArticles()
@@ -16,7 +16,7 @@ export const useArticles = routeLoader$(() => {
 export default component$(() => {
   const articles = useArticles()
 
-  const isHeroHidden = useSignal(false)
+  const _isHeroHidden = useSignal(false)
   useVisibleTask$(({ cleanup }) => {
     const scrollHandler = () => {}
     window.addEventListener('scroll', scrollHandler)
@@ -25,32 +25,30 @@ export default component$(() => {
     })
   })
   return (
-    <>
-      <div class="p-4">
-        <div class="">
-          <Hero />
-        </div>
-        <hr class="my-5" />
-        <div class="md:flex gap-0 md:gap-10">
-          <div class="w-full flex flex-col gap-5 md:w-1/2">
-            <About />
-            <div class="block md:hidden">
-              <Articles posts={articles.value} />
-            </div>
-            <MutualLinks />
-            <div class="block md:hidden">
-              <Bio />
-            </div>
-            <Works />
-          </div>
-          <div class="hidden md:flex flex-col gap-5 w-1/2">
+    <div class="p-4">
+      <div class="">
+        <Hero />
+      </div>
+      <hr class="my-5" />
+      <div class="md:flex gap-0 md:gap-10">
+        <div class="w-full flex flex-col gap-5 md:w-1/2">
+          <About />
+          <div class="block md:hidden">
             <Articles posts={articles.value} />
+          </div>
+          <MutualLinks />
+          <div class="block md:hidden">
             <Bio />
           </div>
+          <Works />
         </div>
-        <Contact />
+        <div class="hidden md:flex flex-col gap-5 w-1/2">
+          <Articles posts={articles.value} />
+          <Bio />
+        </div>
       </div>
-    </>
+      <Contact />
+    </div>
   )
 })
 

@@ -1,12 +1,10 @@
 import {
   component$,
-  JSX,
   Slot,
   useComputed$,
   useSignal,
   useVisibleTask$,
 } from '@builder.io/qwik'
-import { routeLoader$ } from '@builder.io/qwik-city'
 
 const AboutCol = component$<{
   icon: string

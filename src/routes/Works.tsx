@@ -1,20 +1,16 @@
-import { $, component$, inlinedQrl, Slot } from '@builder.io/qwik'
+import { component$, Slot } from '@builder.io/qwik'
 
-import NanohaImage from '../assets/nanoha.jpeg?jsx'
-import HonoWS from '../assets/hono-ws.png?jsx'
-import JSROGP from '../assets/jsr-ogp.png?jsx'
+import AblazeI18n from '../assets/ablaze-l18n.png?jsx'
 import BadappleHono from '../assets/badapple-hono.png?jsx'
 import Ha from '../assets/ha.png?jsx'
+import HonoWS from '../assets/hono-ws.png?jsx'
+import JSROGP from '../assets/jsr-ogp.png?jsx'
 import MaterialColorUNO from '../assets/material-color-uno.png?jsx'
-import AblazeI18n from '../assets/ablaze-l18n.png?jsx'
+import NanohaImage from '../assets/nanoha.jpeg?jsx'
 import SpaceUnicorn from '../assets/spaceunicorn.png?jsx'
 
 export const Work = component$(
-  (props: {
-    title: string
-    desc: string
-    link: string
-  }) => {
+  (props: { title: string; desc: string; link: string }) => {
     return (
       <a
         class="min-w-40 snap-start"
