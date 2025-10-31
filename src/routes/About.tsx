@@ -36,7 +36,7 @@ export const About = component$(() => {
     })
   })
   const age = useComputed$(
-    () => (date.value - BIRTH) / 1000 / 3600 / 24 / 364.24219,
+    () => (date.value - BIRTH) / 1000 / 3600 / 24 / 365.24219,
   )
   return (
     <div>
