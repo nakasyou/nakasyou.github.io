@@ -6,6 +6,8 @@ import {
   useVisibleTask$,
 } from '@builder.io/qwik'
 
+const BIRTH = new Date("2009-11-03T00:00:00+09:00").getTime()
+
 const AboutCol = component$<{
   icon: string
 }>((props) => {
@@ -34,7 +36,7 @@ export const About = component$(() => {
     })
   })
   const age = useComputed$(
-    () => (date.value - 1257174000000) / 1000 / 3600 / 24 / 364.25636,
+    () => (date.value - BIRTH) / 1000 / 3600 / 24 / 364.24219,
   )
   return (
     <div>
