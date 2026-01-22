@@ -16,6 +16,15 @@ export const RouterHead = component$(() => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XCPC66GQ5T"></script>
+    <script dangerouslySetInnerHTML={`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-XCPC66GQ5T');
+    `} />
+
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />
       ))}
