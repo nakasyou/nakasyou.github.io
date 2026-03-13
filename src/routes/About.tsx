@@ -6,7 +6,7 @@ import {
   useVisibleTask$,
 } from '@builder.io/qwik'
 
-const BIRTH = new Date("2009-11-03T00:00:00+09:00").getTime()
+const BIRTH = new Date('2009-11-03T00:00:00+09:00').getTime()
 
 const AboutCol = component$<{
   icon: string

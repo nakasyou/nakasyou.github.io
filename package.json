@@ -13,12 +13,12 @@
   "type": "module",
   "scripts": {
     "build": "qwik build",
-    "build.client": "vite build",
-    "build.preview": "vite build --ssr src/entry.preview.tsx",
-    "build.server": "vite build -c adapters/static/vite.config.ts",
+    "build.client": "vp build",
+    "build.preview": "vp build --ssr src/entry.preview.tsx",
+    "build.server": "vp build -c adapters/static/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
     "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
-    "dev": "vite --mode ssr",
+    "dev": "vp dev --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "biome check --write",
     "preview": "qwik build preview && vite preview --open",
@@ -39,7 +39,7 @@
     "ignore": "^7.0.3",
     "typescript": "5.4.5",
     "undici": "*",
-    "vite": "npm:rolldown-vite",
+    "vite-plus": "^0.1.11",
     "vite-tsconfig-paths": "^4.2.1"
   },
   "dependencies": {

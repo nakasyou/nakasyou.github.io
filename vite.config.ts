@@ -5,7 +5,7 @@ import uno from '@unocss/vite'
  * This is the base config for vite.
  * When building, the adapter config is used which loads this file and extends it.
  */
-import { defineConfig, type UserConfig } from 'vite'
+import { defineConfig, type UserConfig } from 'vite-plus'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import pkg from './package.json'
 
