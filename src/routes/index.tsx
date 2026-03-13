@@ -1,6 +1,7 @@
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik'
 import { type DocumentHead, routeLoader$ } from '@builder.io/qwik-city'
 import { getArticles } from '~/lib/articles'
+import ArabCat from '../assets/arab.jpg?jsx'
 import { About } from './About'
 import { Articles } from './Articles'
 import { Contact } from './Contact'
@@ -39,6 +40,12 @@ export default component$(() => {
           <MutualLinks />
           <div class="block md:hidden">
             <Contact />
+          </div>
+          <div class="grow grid place-items-center">
+            <div class="flex flex-col items-center gap-1">
+              <ArabCat class="w-20 h-20" />
+              <div class="text-sm text-gray-600">もっとください</div>
+            </div>
           </div>
         </div>
         <div class="hidden md:flex flex-col gap-10 w-1/2">
