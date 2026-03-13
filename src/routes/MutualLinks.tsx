@@ -5,8 +5,8 @@ export const MutualLinks = component$(() => {
   return (
     <div class="flex flex-col gap-3">
       <div class="flex gap-2 items-end">
-        <div class="text-3xl font-bold mb-2">Mutual Links</div>
-        <div class="text-gray-500 mb-2">
+        <div class="text-3xl font-bold mb-3">Mutual Links</div>
+        <div class="text-gray-500 mb-3">
           - Request{' '}
           <a
             class="underline hover:no-underline"

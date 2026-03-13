@@ -28,7 +28,7 @@ export const Articles = component$<{
 }>((props) => {
   return (
     <div>
-      <div class="text-3xl font-bold mb-2">Articles</div>
+      <div class="text-3xl font-bold mb-3">Articles</div>
       <div class="flex flex-col gap-2">
         {props.posts.map((post, i) => (
           <>

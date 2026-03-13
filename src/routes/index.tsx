@@ -5,6 +5,7 @@ import { About } from './About'
 import { Articles } from './Articles'
 import { Contact } from './Contact'
 import { Hero } from './Hero'
+import Ive from './Ive'
 import { MutualLinks } from './MutualLinks'
 
 export const useArticles = routeLoader$(() => {
@@ -31,16 +32,20 @@ export default component$(() => {
       <div class="md:flex gap-20 my-10">
         <div class="w-full flex flex-col gap-10 md:w-1/2">
           <About />
+          <Ive />
           <div class="block md:hidden">
             <Articles posts={articles.value} />
           </div>
           <MutualLinks />
+          <div class="block md:hidden">
+            <Contact />
+          </div>
         </div>
         <div class="hidden md:flex flex-col gap-10 w-1/2">
           <Articles posts={articles.value} />
+          <Contact />
         </div>
       </div>
-      <Contact />
     </div>
   )
 })

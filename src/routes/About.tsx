@@ -40,7 +40,7 @@ export const About = component$(() => {
   )
   return (
     <div>
-      <div class="text-3xl font-bold mb-2">About</div>
+      <div class="text-3xl font-bold mb-3">About</div>
       <ul class="flex flex-col gap-2">
         <AboutCol icon="i-tabler:label">Shotaro Nakamura</AboutCol>
         <AboutCol icon="i-tabler:torii">中村 承太郎</AboutCol>

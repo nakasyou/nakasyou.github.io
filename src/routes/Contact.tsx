@@ -61,7 +61,7 @@ const ContactLink = component$<
 })
 export const Contact = component$(() => {
   return (
-    <div class="w-full grid place-items-center my-10">
+    <div class="w-full">
       <div class="grid">
         <div class="text-3xl font-bold mb-4">Contact</div>
         <div class="grid grid-cols-1 gap-2 w-full md:max-w-100">
