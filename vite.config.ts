@@ -1,6 +1,9 @@
 import { qwikVite } from '@builder.io/qwik/optimizer'
 import { qwikCity } from '@builder.io/qwik-city/vite'
+import { partytownVite } from '@qwik.dev/partytown/utils'
 import uno from '@unocss/vite'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 /**
  * This is the base config for vite.
  * When building, the adapter config is used which loads this file and extends it.
@@ -17,12 +20,20 @@ const { dependencies = {}, devDependencies = {} } = pkg as unknown as {
 }
 errorOnDuplicatesPkgDeps(devDependencies, dependencies)
 
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
 /**
  * Note that Vite normally starts from `index.html` but the qwikCity plugin makes start at `src/entry.ssr.tsx` instead.
  */
 export default defineConfig((): UserConfig => {
   return {
-    plugins: [uno(), qwikCity(), qwikVite(), tsconfigPaths()],
+    plugins: [
+      uno(),
+      qwikCity(),
+      qwikVite(),
+      tsconfigPaths(),
+      partytownVite({ dest: join(__dirname, 'dist', '~partytown') }),
+    ],
     // This tells Vite which dependencies to pre-build in dev mode.
     optimizeDeps: {
       // Put problematic deps that break bundling here, mostly those with binaries.

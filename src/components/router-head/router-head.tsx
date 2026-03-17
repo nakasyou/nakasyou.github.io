@@ -19,6 +19,21 @@ export const RouterHead = component$(() => {
       <meta name="twitter:site" content="@nakasyou0" />
       <meta name="twitter:creator" content="@nakasyou0" />
 
+      <script
+        type="text/partytown"
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-XCPC66GQ5T"
+      ></script>
+      <script
+        type="text/partytown"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: this is a static script
+        dangerouslySetInnerHTML={`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XCPC66GQ5T');
+    `}
+      />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />
