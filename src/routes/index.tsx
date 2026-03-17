@@ -25,7 +25,7 @@ export default component$(() => {
     })
   })
   return (
-    <div class="max-w-4xl mx-auto px-10 py-20">
+    <main class="max-w-4xl mx-auto px-10 py-20">
       <div class="">
         <Hero />
       </div>
@@ -43,7 +43,7 @@ export default component$(() => {
           </div>
           <div class="grow grid place-items-center">
             <div class="flex flex-col items-center gap-1">
-              <ArabCat class="w-20 h-20" />
+              <ArabCat class="w-20 h-20" alt="アラブ猫" />
               <div class="text-sm text-gray-600">もっとください</div>
             </div>
           </div>
@@ -53,7 +53,7 @@ export default component$(() => {
           <Contact />
         </div>
       </div>
-    </div>
+    </main>
   )
 })
 

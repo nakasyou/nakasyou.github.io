@@ -12,16 +12,17 @@ export const MutualLinks = component$(() => {
             class="underline hover:no-underline"
             target="_blank"
             rel="noreferrer"
+            aria-label="GitHub Issues で相互リンクを申請する"
             href="https://github.com/nakasyou/nakasyou.github.io/issues/new?assignees=&labels=&template=%E7%9B%B8%E4%BA%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E8%BF%BD%E5%8A%A0%E8%A6%81%E6%9C%9B.md&title=%E7%9B%B8%E4%BA%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E8%BF%BD%E5%8A%A0%E8%A6%81%E6%9C%9B"
           >
-            here
+on GitHub Issues
           </a>
         </div>
       </div>
       <div>
         <ul class="pr-2 flex flex-col gap-2">
           {mutualLinks.map(({ name, url, author }) => (
-            <div class="flex items-center justify-between" key={url}>
+            <li class="flex items-center justify-between" key={url}>
               <a
                 class="text-teal-700"
                 href={url}
@@ -31,7 +32,7 @@ export const MutualLinks = component$(() => {
                 {name}
               </a>
               <div class="text-gray-500 text-right">&nbsp;{author}</div>
-            </div>
+            </li>
           ))}
         </ul>
       </div>

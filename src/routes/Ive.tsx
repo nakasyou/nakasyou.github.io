@@ -74,9 +74,9 @@ const Jiman = component$(
               src={
                 props.evidence.type === 'image'
                   ? props.evidence.src
-                  : 'https://via.placeholder.com/400x300?text=No+Image'
+                  : '/favicon.ico'
               }
-              alt="Evidence"
+              alt={`${props.text} の証跡`}
               class="w-full h-auto"
             />
           </div>
@@ -85,6 +85,7 @@ const Jiman = component$(
         {props.evidence.type === 'image' ? (
           <button
             type="button"
+            aria-label={`${props.text} の詳細を開く`}
             onClick$={() => {
               isOpenedDialog.value = true
             }}
@@ -92,7 +93,12 @@ const Jiman = component$(
             <div class="i-tabler:info-circle w-5 h-5 text-gray-500 hover:text-gray-700" />
           </button>
         ) : (
-          <a href={props.evidence.url} target="_blank" rel="noreferrer">
+          <a
+            href={props.evidence.url}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${props.text} の証跡リンク`}
+          >
             <div class="i-tabler:info-circle w-5 h-5 text-gray-500 hover:text-gray-700" />
           </a>
         )}
