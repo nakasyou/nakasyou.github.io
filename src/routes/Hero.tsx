@@ -5,8 +5,10 @@ export const Hero = component$(() => {
     <div class="flex flex-col gap-2">
       <div class="flex justify-center gap-2 items-center">
         <img
-          src="https://github.com/nakasyou.png"
-          alt="Icon"
+          src="/profile.png"
+          alt="Shotaro Nakamura のプロフィール画像"
+          width={64}
+          height={64}
           class="rounded-full w-16 h-16"
         />
         <div class="flex flex-wrap gap-1 items-center">
