@@ -20,42 +20,56 @@ export const Hero = component$(() => {
           href="https://github.com/nakasyou"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub"
+          title="GitHub"
         />
         <a
           class="i-simple-icons:bluesky w-6 h-6"
           href="https://nakasyou.bsky.social"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Bluesky"
+          title="Bluesky"
         />
         <a
           class="i-simple-icons:x w-6 h-6"
           href="https://x.com/nakasyou0"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="X"
+          title="X"
         />
         <a
           class="i-simple-icons:zenn w-6 h-6"
           href="https://zenn.dev/nakasyou"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Zenn"
+          title="Zenn"
         />
         <a
           class="i-simple-icons:matrix w-6 h-6"
           href="https://matrix.to/#/@nakasyou:matrix.org"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Matrix"
+          title="Matrix"
         />
         <a
           class="i-custom:sizume w-6 h-6"
           href="https://sizu.me/nakasyou"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Sizu.me"
+          title="Sizu.me"
         />
         <a
           class="i-simple-icons:instagram w-6 h-6"
           href="https://instagram.com/nakasyou_opened"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Instagram"
+          title="Instagram"
         />
       </div>
     </div>
