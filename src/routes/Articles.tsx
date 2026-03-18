@@ -12,7 +12,7 @@ const OnePost = component$<{
       class="hover:scale-105 transition-transform"
     >
       <div>
-        <div class="text-xl">{props.post.title}</div>
+        <div class="text-base leading-snug">{props.post.title}</div>
         <div class="text-gray-500 flex items-center gap-3">
           <div>{props.post.formattedDate}</div>
           <div>{props.post.type === 'zenn' ? 'zenn.dev' : 'sizu.me'}</div>

@@ -4,6 +4,7 @@ import {
   RouterOutlet,
   ServiceWorkerRegister,
 } from '@builder.io/qwik-city'
+import { QwikPartytown } from './components/partytown/partytown'
 import { RouterHead } from './components/router-head/router-head'
 
 import 'uno.css'
@@ -27,6 +28,7 @@ export default component$(() => {
             href={`${import.meta.env.BASE_URL}manifest.json`}
           />
         )}
+        <QwikPartytown forward={['dataLayer.push']} />
         <RouterHead />
       </head>
       <body lang="en">
