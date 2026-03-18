@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik'
-import ProfileImage from '~/assets/profile.png?w=64&h=64&jsx'
+import ProfileImage from '~/assets/profile.png?w=64;256;512&jsx'
 
 export const Hero = component$(() => {
   return (
