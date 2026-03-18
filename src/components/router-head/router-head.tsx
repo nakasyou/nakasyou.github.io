@@ -20,18 +20,35 @@ export const RouterHead = component$(() => {
       <meta name="twitter:creator" content="@nakasyou0" />
 
       <script
-        type="text/partytown"
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-XCPC66GQ5T"
-      ></script>
-      <script
-        type="text/partytown"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: this is a static script
         dangerouslySetInnerHTML={`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XCPC66GQ5T');
+      (() => {
+        const GA_ID = 'G-XCPC66GQ5T';
+        if (navigator.doNotTrack === '1') return;
+        if (window.__gaLoaded) return;
+
+        const init = () => {
+          if (window.__gaLoaded) return;
+          window.__gaLoaded = true;
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function gtag(){dataLayer.push(arguments);};
+
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+          script.onload = () => {
+            window.gtag('js', new Date());
+            window.gtag('config', GA_ID);
+          };
+          document.head.appendChild(script);
+        };
+
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(init, { timeout: 2500 });
+        } else {
+          setTimeout(init, 2000);
+        }
+      })();
     `}
       />
 

@@ -30,7 +30,6 @@
     "@builder.io/qwik": "^1.16.0",
     "@builder.io/qwik-city": "^1.16.0",
     "@qwik-ui/headless": "^0.6.4",
-    "@qwik.dev/partytown": "^0.11.2",
     "@types/node": "20.14.11",
     "@unocss/core": "^65.4.2",
     "@unocss/preset-icons": "^65.4.2",
