@@ -1,6 +1,6 @@
 import { component$, Slot, useSignal, useTask$ } from '@builder.io/qwik'
-import eikenpre125 from '~/assets/eikenpre1-25.png'
-import joai2026 from '~/assets/joai2026.png'
+import EikenPre125Image from '~/assets/eikenpre1-25.png?jsx'
+import Joai2026Image from '~/assets/joai2026.png?jsx'
 
 const JimanDialog = component$(
   (props: { isShown: boolean; onClose$: () => void }) => {
@@ -57,7 +57,7 @@ const Jiman = component$(
         }
       | {
           type: 'image'
-          src: string
+          Image: any
         }
   }) => {
     const isOpenedDialog = useSignal(false)
@@ -70,15 +70,19 @@ const Jiman = component$(
           }}
         >
           <div class="flex flex-col gap-4">
-            <img
-              src={
-                props.evidence.type === 'image'
-                  ? props.evidence.src
-                  : '/favicon.ico'
-              }
-              alt={`${props.text} の証跡`}
-              class="w-full h-auto"
-            />
+            {props.evidence.type === 'image' ? (
+              <props.evidence.Image
+                alt={`${props.text} の証跡`}
+                class="w-full h-auto"
+                loading="lazy"
+              />
+            ) : (
+              <img
+                src="/favicon.ico"
+                alt={`${props.text} の証跡`}
+                class="w-full h-auto"
+              />
+            )}
           </div>
         </JimanDialog>
         <div>{props.text}</div>
@@ -114,7 +118,7 @@ export default component$(() => {
       <ul class="flex flex-col gap-2">
         <Jiman
           text="日本人工知能オリンピック'26 金賞"
-          evidence={{ type: 'image', src: joai2026 }}
+          evidence={{ type: 'image', Image: Joai2026Image }}
         />
         <Jiman
           text="未踏ジュニア'25 スーパークリエイター"
@@ -132,7 +136,7 @@ export default component$(() => {
         />
         <Jiman
           text="英検準一級 GP1 -2 😭"
-          evidence={{ type: 'image', src: eikenpre125 }}
+          evidence={{ type: 'image', Image: EikenPre125Image }}
         />
       </ul>
     </div>

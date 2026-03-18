@@ -1,15 +1,15 @@
 import { component$ } from '@builder.io/qwik'
+import ProfileImage from '~/assets/profile.png?w=64&h=64&jsx'
 
 export const Hero = component$(() => {
   return (
     <div class="flex flex-col gap-2">
       <div class="flex justify-center gap-2 items-center">
-        <img
-          src="/profile.png"
+        <ProfileImage
           alt="Shotaro Nakamura のプロフィール画像"
-          width={64}
-          height={64}
           class="rounded-full w-16 h-16"
+          decoding="sync"
+          loading="eager"
         />
         <div class="flex flex-wrap gap-1 items-center">
           <div class="font-bold text-lg">Shotaro Nakamura</div>
