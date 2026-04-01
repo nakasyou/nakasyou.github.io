@@ -60,4 +60,10 @@ export const mutualLinks = [
     addedAt: '2025-06-22',
     url: 'https://ynai20.vercel.app',
   },
+  {
+    name: 'm1ntooo.com',
+    author: 'みんとさん',
+    addedAt: '2026-04-01',
+    url: 'https://m1ntooo.com',
+  },
 ]
