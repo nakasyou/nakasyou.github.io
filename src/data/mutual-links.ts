@@ -67,6 +67,12 @@ export const mutualLinks = [
     url: 'https://m1ntooo.com',
   },
   {
+    name: 'ryopc',
+    author: 'game_ryoさん',
+    addedAt: '2026-04-03',
+    url: 'https://ryopc.f5.si',
+  },
+  {
     name: 'tokuzou.me',
     author: 'とくぞうさん',
     addedAt: '2026-04-03',
