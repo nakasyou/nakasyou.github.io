@@ -72,4 +72,10 @@ export const mutualLinks = [
     addedAt: '2026-04-03',
     url: 'https://tokuzou.me',
   },
+  {
+    name: 'odango.app',
+    author: 'あかずさん',
+    addedAt: '2026-04-03',
+    url: 'https://odango.app',
+  },
 ]
