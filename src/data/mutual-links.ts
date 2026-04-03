@@ -66,4 +66,10 @@ export const mutualLinks = [
     addedAt: '2026-04-01',
     url: 'https://m1ntooo.com',
   },
+  {
+    name: 'tokuzou.me',
+    author: 'とくぞうさん',
+    addedAt: '2026-04-03',
+    url: 'https://tokuzou.me',
+  },
 ]
