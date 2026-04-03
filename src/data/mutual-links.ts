@@ -66,4 +66,10 @@ export const mutualLinks = [
     addedAt: '2026-04-01',
     url: 'https://m1ntooo.com',
   },
+  {
+    name: 'odango.app',
+    author: 'あかずさん',
+    addedAt: '2026-04-03',
+    url: 'https://odango.app',
+  },
 ]
