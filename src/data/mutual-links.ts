@@ -84,4 +84,10 @@ export const mutualLinks = [
     addedAt: '2026-04-03',
     url: 'https://odango.app',
   },
+  {
+    name: 'drsb.f5.si',
+    author: 'ゆーさん',
+    addedAt: '2026-04-24',
+    url: 'https://drsb.f5.si',
+  },
 ]
