@@ -90,4 +90,10 @@ export const mutualLinks = [
     addedAt: '2026-04-24',
     url: 'https://drsb.f5.si',
   },
+  {
+    name: 'かける族のホームページ',
+    author: 'かける族',
+    addedAt: '2026-05-25',
+    url: 'https://kakeru.f5.si/',
+  },
 ]
