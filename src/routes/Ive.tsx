@@ -135,7 +135,7 @@ export default component$(() => {
           }}
         />
         <Jiman
-          text="英検準1級 合格（GP1 +3）"
+          text="英検準1級"
           evidence={{ type: 'image', Image: EikenPre126Image }}
         />
       </ul>
