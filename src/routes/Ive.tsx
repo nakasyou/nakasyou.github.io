@@ -1,5 +1,5 @@
 import { component$, Slot, useSignal, useTask$ } from '@builder.io/qwik'
-import EikenPre125Image from '~/assets/eikenpre1-25.png?jsx'
+import EikenPre126Image from '~/assets/eikenpre1-26.png?jsx'
 import Joai2026Image from '~/assets/joai2026.png?jsx'
 
 const JimanDialog = component$(
@@ -135,8 +135,8 @@ export default component$(() => {
           }}
         />
         <Jiman
-          text="英検準一級 GP1 -2 😭"
-          evidence={{ type: 'image', Image: EikenPre125Image }}
+          text="英検準1級 合格（GP1 +3）"
+          evidence={{ type: 'image', Image: EikenPre126Image }}
         />
       </ul>
     </div>
