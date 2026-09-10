@@ -96,4 +96,28 @@ export const mutualLinks = [
     addedAt: '2026-05-25',
     url: 'https://kakeru.f5.si/',
   },
+  {
+    name: 'moons14.com',
+    author: 'むーんずさん',
+    addedAt: '2026-07-29',
+    url: 'https://moons14.com',
+  },
+  {
+    name: 'yutakobayashi.com',
+    author: 'yuta kobayashiさん',
+    addedAt: '2026-07-29',
+    url: 'https://yutakobayashi.com',
+  },
+  {
+    name: 't4ko.pet',
+    author: 'そうにゃんせんぱいさん',
+    addedAt: '2026-07-29',
+    url: 'https://t4ko.pet',
+  },
+  {
+    name: 'aomona.me',
+    author: 'あおもなさん',
+    addedAt: '2026-07-29',
+    url: 'https://aomona.me',
+  }
 ]
