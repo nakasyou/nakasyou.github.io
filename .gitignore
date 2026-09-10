@@ -40,3 +40,8 @@ lerna-debug.log*
 # Yarn
 .yarn/*
 !.yarn/releases
+
+# Cloudflare
+.wrangler/
+.dev.vars*
+wrangler.staging.local.json

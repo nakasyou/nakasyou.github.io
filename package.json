@@ -17,7 +17,7 @@
     "build.preview": "vp build --ssr src/entry.preview.tsx",
     "build.server": "vp build -c adapters/static/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
-    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
+    "deploy": "bun run build && wrangler deploy",
     "dev": "vp dev --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "biome check --write",
@@ -40,7 +40,8 @@
     "typescript": "5.4.5",
     "undici": "*",
     "vite-plus": "^0.1.11",
-    "vite-tsconfig-paths": "^4.2.1"
+    "vite-tsconfig-paths": "^4.2.1",
+    "wrangler": "4.130.0"
   },
   "dependencies": {
     "@iconify-json/simple-icons": "^1.2.20",
