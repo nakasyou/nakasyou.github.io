@@ -1,0 +1,24 @@
+name: Refresh profile on Cloudflare
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare build of main
+        env:
+          DEPLOY_HOOK: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}
+        run: |
+          test -n "$DEPLOY_HOOK"
+          curl --fail --silent --show-error --request POST "$DEPLOY_HOOK"

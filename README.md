@@ -1,71 +1,33 @@
-# Qwik City App ⚡️
+# nakasyou profile
 
-- [Qwik Docs](https://qwik.dev/)
-- [Discord](https://qwik.dev/chat)
-- [Qwik GitHub](https://github.com/QwikDev/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
-
----
-
-## Project Structure
-
-This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
-
-Inside your project, you'll see the following directory structure:
-
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
-
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.dev/qwikcity/routing/overview/) for more info.
-
-- `src/components`: Recommended directory for components.
-
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
-
-## Add Integrations and deployment
-
-Use the `bun qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.dev/qwikcity/guides/static-site-generation/).
-
-```shell
-bun qwik add # or `bun qwik add`
-```
+Qwik static site deployed to Cloudflare Workers at https://profile.nakasyou.how.
 
 ## Development
 
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
-
-```shell
-npm start # or `bun start`
+```sh
+bun install --frozen-lockfile
+bun run dev
 ```
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+## Deployment
 
-## Preview
-
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
-
-```shell
-bun preview # or `bun preview`
+```sh
+bun run deploy
 ```
 
-## Production
+Cloudflare Builds is connected to `nakasyou/nakasyou.github.io`, production branch `main`.
+Build command: `bun run build`. Deploy command: `bunx wrangler deploy`.
+GitHub Actions validates the build. The `Refresh profile on Cloudflare` workflow
+triggers a fresh build daily at 09:00 UTC (18:00 JST), preserving the previous schedule.
+Its deploy hook is stored in the `CLOUDFLARE_DEPLOY_HOOK` repository secret.
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
+`wrangler.jsonc` configures static assets and the `profile.nakasyou.how/*` route.
+There is no `/bowling` proxy on the Worker; unknown paths return 404.
+The proxied DNS record supplies the hostname for the Worker route.
 
-```shell
-bun build # or `bun build`
-```
+`nakasyou.how` is served through the `unko` VPS and Cloudflare Tunnel:
+- `/` proxies to `https://profile.nakasyou.how`.
+- `/bowling/` proxies to the existing bowling application.
+- `www.nakasyou.how` redirects to the apex.
 
-## Static Site Generator (Node.js)
-
-```shell
-bun build.server
-```
+VPS configuration is maintained in the bowlingboard project's `deploy/nakasyou.nginx`.
