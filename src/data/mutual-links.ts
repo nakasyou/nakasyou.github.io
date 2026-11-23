@@ -96,4 +96,10 @@ export const mutualLinks = [
     addedAt: '2026-05-25',
     url: 'https://kakeru.f5.si/',
   },
+  {
+    name: 's0u7a.net',
+    author: 's0u7aさん',
+    addedAt: '2026-11-24',
+    url: 'https://s0u7a.net',
+  },
 ]
